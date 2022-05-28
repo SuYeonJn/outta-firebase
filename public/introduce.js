@@ -48,7 +48,7 @@ $(document).on('click', '#bl2, #al2' ,function(e) {
   HoverChange('#bl1, #al1','#bl1','#al1');
   HoverChange('#bl3, #al3','#bl3','#al3');
   HoverChange('#bl4, #al4','#bl4','#al4');
-  window.scrollTo({ left: 0, top: 1574, behavior: "smooth" });
+  window.scrollTo({ left: 0, top: 1000, behavior: "smooth" });
 })
 
 $(document).on('click', '#bl3, #al3' ,function(e) {
@@ -60,7 +60,7 @@ $(document).on('click', '#bl3, #al3' ,function(e) {
   HoverChange('#bl1, #al1','#bl1','#al1');
   HoverChange('#bl2, #al2','#bl2','#al2');
   HoverChange('#bl4, #al4','#bl4','#al4');
-  window.scrollTo({ left: 0, top: 3380, behavior: "smooth" });
+  window.scrollTo({ left: 0, top: 2100, behavior: "smooth" });
 })
 
 $(document).on('click', '#bl4, #al4' ,function(e) {
@@ -72,12 +72,49 @@ $(document).on('click', '#bl4, #al4' ,function(e) {
   HoverChange('#bl1, #al1','#bl1','#al1');
   HoverChange('#bl2, #al2','#bl2','#al2');
   HoverChange('#bl3, #al3','#bl3','#al3');
-  window.scrollTo({ left: 0, top: 4889, behavior: "smooth" });
+  window.scrollTo({ left: 0, top: 3200, behavior: "smooth" });
 })
 
 // 버튼 구현 완료
 
+// nav bar//
+$(document).on('mouseenter', '.onetex' ,function(e) {
+  $('.one, .oneone, .oneonetwo, .onetwo').css('display', 'block');
+  $('.two, .twoone, .twotwo, .twothree').css('display', 'none');
+  $('.thi, .thione').css('display', 'none');
+})
+
+$(document).on('mouseenter', '.twotex' ,function(e) {
+  $('.one, .oneone, .oneonetwo, .onetwo').css('display', 'none');
+  $('.two, .twoone, .twotwo, .twothree').css('display', 'block');
+  $('.thi, .thione').css('display', 'none');
+})
+
+$(document).on('mouseenter', '.thitex' ,function(e) {
+  $('.one, .oneone, .oneonetwo, .onetwo').css('display', 'none');
+  $('.two, .twoone, .twotwo, .twothree').css('display', 'none');
+  $('.thi, .thione').css('display', 'block');
+})
+
+function WeightChange(a){
+  $(document).ready(function(){ 
+      $(a).hover(function(){  
+          $(a).css('font-weight', '700');
+      }, function(){  
+          $(a).css('font-weight', '500');
+      })}) 
+  }
+
+WeightChange('.oneone');
+WeightChange('.oneonetwo');
+WeightChange('.onetwo');
+WeightChange('.twoone');
+WeightChange('.twotwo');
+WeightChange('.twothree');
+WeightChange('.thione');
+
 // img click
+/*
 jQuery.fn.centerpos = function (a, b) {
   this.css("position","absolute");
   this.css("top", Math.max(0, a + (($(window).height() - $(this).outerHeight()) / 2) + 
@@ -91,22 +128,22 @@ jQuery.fn.centerpos = function (a, b) {
 function ClickImage(a,b,c,d,x,y,z,t){
   $(document).on('click', a ,function(e) {
     $(b).css('display', 'block');
-    $(c).centerpos(-170, 32.5);
-    $(d).centerpos(39, 32.5);
+    $(c).centerpos(0, 300);
+    $(d).centerpos(200, 300);
     $(x).centerpos(76, z);
     $(t).centerpos(130, 28);
     /*$('.insta').centerpos(130, 15.5);
     $('.mail').centerpos(130, 49.5);*/
-    $(y).centerpos(210, 32,5);
+    /*$(y).centerpos(210, 32,5);
   })
-}
-
+}*/
+/*
 function DeleteImage(a){
   $(document).on('click', '.quit' ,function(e) {
     $(a).css('display', 'none');
   })
 }
-
+*/
 // board + edu
 ClickImage('#김지원', '.김지원, .name_0, .job_0, .maxim_0, .email_0', '.김지원', '.name_0', '.job_0', '.maxim_0', 32, '.email_0')
 DeleteImage('.김지원, .name_0, .job_0, .maxim_0, .email_0')
@@ -209,7 +246,7 @@ DeleteImage('.장예나, .name_44, .job_7, .maxim_44, .email_44')
 
 $(document).on('click', '.wrapper img, .wrapper2 img' ,function(e) {
   $('.purpler, .whitebox, .quit, .outtaframe').css('display', 'block');
-  $('.whitebox').centerpos(0, 0);
+  $('.whitebox').centerpos(300, 250);
   $('.quit').centerpos(-385, 316);
   $('.outtaframe').centerpos(400, 32);
 })
