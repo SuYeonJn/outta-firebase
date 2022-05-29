@@ -11,12 +11,13 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCbdJpxGUjqMIRlUGshKJW9bOG1KzEIELk",
-  authDomain: "test-ad597.firebaseapp.com",
-  projectId: "test-ad597",
-  storageBucket: "test-ad597.appspot.com",
-  messagingSenderId: "606337331667",
-  appId: "1:606337331667:web:ff531a29c9b075624aff26",
+  apiKey: "AIzaSyD2D8pmuo_y8DVuh9hqNFmA8kZGsfuQiE4",
+  authDomain: "outta-sexy-web.firebaseapp.com",
+  projectId: "outta-sexy-web",
+  storageBucket: "outta-sexy-web.appspot.com",
+  messagingSenderId: "442716455224",
+  appId: "1:442716455224:web:42483957a4f0d1f2e601cd",
+  measurementId: "G-7NV2JY54JT"
 };
 
 const app = initializeApp(firebaseConfig);
